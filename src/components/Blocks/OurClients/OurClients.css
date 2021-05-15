@@ -1,0 +1,54 @@
+#clientes{
+    padding: 5%;
+    background: var(--plainBG_Dye);
+}
+#clientes > div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#clientes > div > a{
+    position: relative;
+    margin: 15px;
+    width:auto;
+    height: 125px;
+}
+#clientes > div > a > img{
+    position:relative;
+    top:0;
+    left:0;
+    width:auto;
+    height:100%;
+    filter: saturate(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    opacity: 75%;
+    transition: 0.3s;
+    cursor:pointer;
+}
+#clientes > div > a > img:hover{
+    opacity: 100%;
+    filter: saturate(25%);
+    -webkit-filter: grayscale(25%);
+    -moz-filter: grayscale(25%);
+    -ms-filter: grayscale(25%);
+    -o-filter: grayscale(25%); 
+    transform: scale(0.95,0.95);
+    transition: 0.3s;
+}
+@media screen and (max-width:450px){
+    #clientes > div > a{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 230px){
+    #clientes > div > a{
+        width: 60px;
+        height: 60px;
+    }
+}

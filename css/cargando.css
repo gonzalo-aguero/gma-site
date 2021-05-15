@@ -1,0 +1,45 @@
+#div-cargando{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+#div-izq{
+    width: 50%;
+    background: #ffffff;
+}
+#div-imgCargando{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+#div-imgCargando > img{
+    display:none;
+    position: relative;
+    z-index: 1002;
+    width: 100px;
+    height:100px;
+}
+#div-imgCargando > p{
+    text-align: center;
+}
+#div-der{
+    width: 50%;
+    background: #ffffff;
+}
