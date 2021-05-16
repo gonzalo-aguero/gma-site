@@ -101,13 +101,3 @@ $('#section-motivacion > ._3').hover(()=>{
         mot3=false;
     }
 })
-$(document).ready(()=>{
-    $('.slider').bxSlider({
-        auto: true,
-        speed: 1000,
-        pause: 5000,
-        mode: 'horizontal',
-        touchEnabled: false
-    });
-    
-})

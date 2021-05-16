@@ -1,10 +1,6 @@
 export default class Header{
-    constructor(){
-        //IMPORTED IN INDEX PAGE
-        this.styles = '<link rel="stylesheet" href="./src/components/Header/Header.css">';
-    }
-    printHTML(){
-        return `
+    constructor(sc){
+        this.html = `
             <header>
             <nav>
                 <div id="logoANDtitulo" class="div-nav">
@@ -16,17 +12,17 @@ export default class Header{
                 </div>
                 <div class="div2-nav">
                     <div id="btnAbrirMenu"><img src="iconosMaterial_io/menu-24px.svg" alt="" srcset=""></div>
-                    <a href="#Contacto"><div id="btnPresupuesto" class="btnPresupuesto">PRESUPUESTO</div></a>
+                    <a href="${sc.Views.Contacto.UrlHash}"><div id="btnPresupuesto" class="btnPresupuesto">PRESUPUESTO</div></a>
                 </div>
                 <div id="div-menu" class="animate__animated animate__fadeIn">
                     <div></div>
                     <ul class="animate__animated animate__fadeInRightBig">
                         <img id="btnCerrarMenu" src="iconosMaterial_io/clear-24px.svg" alt="Cerrar">
-                        <a id="" class="btnIrInicio" style="color:#000000; font-weight: bold" href="#">Inicio</a>
-                        <a class="" href="#Nosotros">Nosotros</a>
-                        <a class="" href="#Servicios">Servicios</a>
-                        <a class="" href="#Contacto">Contacto</a>
-                        <a href="#Contacto" class="btnPresupuesto" id="btnPresupuesto_menu">PRESUPUESTO</a>
+                        <a id="" class="btnIrInicio" style="color:#000000; font-weight: bold" href="${sc.Views.Inicio.UrlHash}">${sc.Views.Inicio.Name}</a>
+                        <a class="" href="${sc.Views.Nosotros.UrlHash}">${sc.Views.Nosotros.Name}</a>
+                        <a class="" href="${sc.Views.Servicios.UrlHash}">${sc.Views.Servicios.Name}</a>
+                        <a class="" href="${sc.Views.Contacto.UrlHash}">${sc.Views.Contacto.Name}</a>
+                        <a href="${sc.Views.Contacto.UrlHash}" class="btnPresupuesto" id="btnPresupuesto_menu">PRESUPUESTO</a>
                         <div id="div-socialMenu">
                             <a href="https://www.instagram.com/gma_desarrolloweb" target="_blank" class="icon-instagram"></a>
                             <a href="https://www.facebook.com/gmadesarrolloweb" target="_blank" class="icon-facebook"></a>
@@ -37,5 +33,37 @@ export default class Header{
             </nav>
         </header>
         `;
+        this.divMenu;
+        this.ul;
     }
+    run(){
+        this.divMenu = document.getElementById("div-menu");
+        this.ul = document.querySelector('#div-menu > ul');
+        var btnAbrirMenu = document.getElementById("btnAbrirMenu");
+        var closeMenuBackgroundButton = document.querySelector("#div-menu > div");
+        var closeMenuBtn = document.getElementById("btnCerrarMenu");
+
+        btnAbrirMenu.addEventListener("click", ()=>{
+            this.openMenu();
+        });
+        closeMenuBackgroundButton.addEventListener("click", ()=>{
+            this.closeMenu();
+        });
+        closeMenuBtn.addEventListener("click", ()=>{
+            this.closeMenu();
+        });
+    }
+    openMenu(){
+        this.divMenu.style.display = 'block';
+    }
+    closeMenu(){
+        this.divMenu.classList.replace("animate__fadeIn", "animate__fadeOut");
+        this.ul.classList.replace("animate__fadeInRightBig", "animate__fadeOutRightBig");
+        setTimeout(() => {
+            this.divMenu.style.display = 'none';
+            this.ul.classList.replace("animate__fadeOutRightBig", "animate__fadeInRightBig");
+            this.divMenu.classList.replace("animate__fadeOut", "animate__fadeIn");
+        }, 200);
+    }
+    
 }

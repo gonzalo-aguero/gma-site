@@ -176,12 +176,6 @@ header > nav{
     align-items: center;
     text-align: center;
 }
-/*
- * Elementos que estan ocultos pero luego se muestran con animaciones
- */
-.div-nav > img, .div-nav > div{
-    display:none;
-}
 @media screen and (max-width: 720px){
     header > nav{
         height: 90px;

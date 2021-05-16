@@ -1,36 +1,54 @@
 "use strict"
+import SiteConfig from "./modules/SiteConfig.js";
 import LoadingView from "./components/LoadingView/LoadingView.js";
 import Home from "./components/Home/Home.js";
+import AboutUs from "./components/AboutUs/AboutUs.js";
+
+var sc = new SiteConfig();
 var loadingView = new LoadingView();
-var home = new Home();
+var home = new Home(sc);
+var aboutUs = new AboutUs(sc);
 var hash = window.location.hash;
 var app = document.getElementById("app");
 loadingView.printHTML();
 loadingView.run();
 setView(hash);
-
 window.addEventListener("hashchange",()=>{
     hash = window.location.hash;
     setView(hash);
 });
 
-function setView(viewName) {
-    switch (viewName) {
+function setView(ViewHash) {
+    switch (ViewHash) {
+        // ### HOME PAGE ###.
         case "":
-            document.head.title = "Inicio";
-            app.innerHTML = home.showView();
+            document.title = sc.Views.Inicio.Title;
+            app.innerHTML = home.html;
+            home.run();
             break;
-        case `#Nosotros`:
-            document.head.title = "Nosotros";
-            app.innerHTML = app.innerHTML = home.showView();;
+        // ### HOME PAGE ###.
+        case sc.Views.Inicio.UrlHash:
+            document.title = sc.Views.Inicio.Title;
+            app.innerHTML = home.html;
+            home.run();
             break;
-        case `#Servicios`:
-            document.head.title = "Servicios";
-            app.innerHTML = app.innerHTML = home.showView();;
+        // ### ABOUT US PAGE ###.
+        case sc.Views.Nosotros.UrlHash:
+            document.title = sc.Views.Nosotros.Title;
+            app.innerHTML = app.innerHTML = aboutUs.html;
+            aboutUs.run();
             break;
-        case `#Contacto`:
-            document.head.title = "Contacto";
-            app.innerHTML = app.innerHTML = home.showView();;
+        // ### SERVICES PAGE ###.
+        case sc.Views.Servicios.UrlHash:
+            document.title = sc.Views.Servicios.Title;
+            app.innerHTML = app.innerHTML = home.showView();
+            home.run();
+            break;
+        // ### CONTACT PAGE ###.
+        case sc.Views.Contacto.UrlHash:
+            document.title = sc.Views.Contacto.Title;
+            app.innerHTML = app.innerHTML = home.showView();
+            home.run();
             break;
         default:
             app.innerHTML = `

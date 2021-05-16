@@ -1,7 +1,6 @@
 "use strict"
 import Header from "../Header/Header.js";
-import CoverPage from "../Blocks/CoverPage/CoverPage.js";
-import Motivation from "../Blocks/Motivation/Motivation.js";
+import AboutUsBlock from "../Blocks/AboutUsBlock/AboutUsBlock.js";
 import OurPoints from "../Blocks/OurPoints/OurPoints.js"
 import Services from "../Blocks/Services/Services.js";
 import ContactUs from "../Blocks/ContactUs/ContactUs.js";
@@ -10,8 +9,7 @@ import Footer from "../Footer/Footer.js";
 
 var sc;//SITE CONFIGURATION
 var header;
-var coverPage;
-var motivation;
+var aboutUsBlock;
 var ourPoints;
 var services;
 var contactUs;
@@ -21,8 +19,7 @@ export default class Home{
     constructor(SiteConfig){
         sc = SiteConfig;
         header = new Header(sc);
-        coverPage = new CoverPage();
-        motivation = new Motivation();
+        aboutUsBlock = new AboutUsBlock();
         ourPoints = new OurPoints();
         services = new Services();
         contactUs = new ContactUs();
@@ -31,8 +28,7 @@ export default class Home{
 
         this.html = `
             ${header.html}
-            ${coverPage.html}
-            ${motivation.html}
+            ${aboutUsBlock.html}
             ${ourPoints.html}
             ${services.html}
             ${contactUs.html}
@@ -42,6 +38,5 @@ export default class Home{
     }
     run(){
         header.run();
-        coverPage.run();
     }
 }

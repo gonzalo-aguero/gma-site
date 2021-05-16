@@ -14,7 +14,8 @@ footer h2{
     font-size: 30px;
     color: var(--logo_Dye);
 }
-footer li{
+footer li,
+footer li > a{
     font-family: var(--font1);
     font-size: 25px;
     color: var(--blancoSuave);
