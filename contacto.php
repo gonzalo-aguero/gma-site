@@ -223,53 +223,29 @@ endif]-->
     </div>
 
     <section class="portadaT2">
-
         <h1 class="titulo">CONTACTO</h1>
-
     </section>
-
     <section id="section-contacto">
-
         <div id="div-form">
-
             <h2>Por favor, rellene el formulario para ponernos en contacto</h2>
-
             <form action="">
-
                 <input type="text" name="name" id="name" placeholder="Nombre">
-
                 <input type="text" name="surname" id="surname" placeholder="Apellido">
-
                 <input type="email" name="mail" id="mail" placeholder="Correo electrónico">
-
                 <input type="text" name="phone" id="phone" placeholder="Teléfono">
-
                 <textarea name="msg" id="msg" placeholder="Mensaje"><?php echo $msg; ?></textarea>
-
                 <input class="btnEnviar" id="btnEnviar" type="submit" value="Enviar">
-
                 <img class="cargandoGif" src="gif/cargandoGif.gif" alt="Cargando...">
-
             </form>
-
         </div>
-
         <div id="div-social">
-
             <h2>Otros medios para comunicarse:</h2>
-
             <div>
-
                 <a href="https://www.instagram.com/gma_desarrolloweb" class="icon-instagram"></a>
-
                 <a href="https://www.facebook.com/gmadesarrolloweb" class="icon-facebook"></a>
-
                 <a href="https://api.whatsapp.com/send?phone=5493434258605&text=Hola,%20quisiera%20hacer%20una%20consulta:" class="icon-whatsapp"></a>
-
             </div>
-
         </div>
-
     </section>
 
     <section id="section-motivacion">

@@ -3,11 +3,13 @@ import SiteConfig from "./modules/SiteConfig.js";
 import LoadingView from "./components/LoadingView/LoadingView.js";
 import Home from "./components/Home/Home.js";
 import AboutUs from "./components/AboutUs/AboutUs.js";
+import Contact from "./components/Contact/Contact.js";
 
 var sc = new SiteConfig();
 var loadingView = new LoadingView();
 var home = new Home(sc);
 var aboutUs = new AboutUs(sc);
+var contact = new Contact(sc);
 var hash = window.location.hash;
 var app = document.getElementById("app");
 loadingView.printHTML();
@@ -47,8 +49,8 @@ function setView(ViewHash) {
         // ### CONTACT PAGE ###.
         case sc.Views.Contacto.UrlHash:
             document.title = sc.Views.Contacto.Title;
-            app.innerHTML = app.innerHTML = home.showView();
-            home.run();
+            app.innerHTML = app.innerHTML = contact.html;
+            contact.run();
             break;
         default:
             app.innerHTML = `

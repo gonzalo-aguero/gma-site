@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+?>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <title>GMA desarrollo web</title>
@@ -7,9 +11,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta name="description" content="Le brindamos a tu empresa la posibilidad de estar presente en internet y poder vender por este poderoso medio. || ¡Consigue tu página web! || ¡Obtén tu tienda online! || ¡Obtén tu e-commerce!"/>
     <meta name="author" content="GMA Desarrollo web" />
-    <meta http-equiv="expires" content="0" />
     <link rel="icon" type="image/png" href="./src/media/img/favicon/logo4.png" />
-    <link rel="stylesheet" href="css/form.css">
 
     <!-- START LIBRARIES STYLES -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
@@ -22,16 +24,18 @@
     <link rel="stylesheet" href="./src/components/LoadingView/LoadingView.css">
     <!-- END GENERAL STYLES -->
     <!-- START COMPONENTS STYLES -->
-    <link rel="stylesheet" href="./src/components/LoadingView/LoadingView.css">
     <link rel="stylesheet" href="./src/components/Header/Header.css">
     <link rel="stylesheet" href="./src/components//Blocks/CoverPage/CoverPage.css">
     <link rel="stylesheet" href="./src/components/Blocks/Motivation/Motivation.css">
-    <link rel="stylesheet" href="./src/components/Blocks/AboutUsBlock/AboutUsBlock.css">
     <link rel="stylesheet" href="./src/components/Blocks/OurPoints/OurPoints.css">
     <link rel="stylesheet" href="./src/components/Blocks/Services/Services.css">
     <link rel="stylesheet" href="./src/components/Blocks/ContactUs/ContactUs.css">
     <link rel="stylesheet" href="./src/components/Blocks/OurClients/OurClients.css">
     <link rel="stylesheet" href="./src/components/Footer/Footer.css">
+
+    <link rel="stylesheet" href="./src/components/Contact/Contact.css">
+    <link rel="stylesheet" href="./src/components/Blocks/ContactForm/ContactForm.css">
+    <link rel="stylesheet" href="./src/components/Blocks/AboutUsBlock/AboutUsBlock.css">
     <!-- END COMPONENTS STYLES -->
 
     <script src="./src/libraries/JQuery/jquery-3.5.1.js"></script>
@@ -72,7 +76,6 @@ src="https://www.facebook.com/tr?id=328163691790309&ev=PageView&noscript=1"
     <div id="app"></div>
     <div id="LoadingView"></div>
     <script src="js/main.js"></script>
-    <script src="js/enlaces.js"></script>
     <script type="module" src="./src/index.js"></script>
 </body>
 </html>

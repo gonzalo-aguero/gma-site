@@ -1,5 +1,7 @@
+var sc;
 export default class Header{
-    constructor(sc){
+    constructor(SiteConfig){
+        sc = SiteConfig;
         this.html = `
             <header>
             <nav>
@@ -18,10 +20,10 @@ export default class Header{
                     <div></div>
                     <ul class="animate__animated animate__fadeInRightBig">
                         <img id="btnCerrarMenu" src="iconosMaterial_io/clear-24px.svg" alt="Cerrar">
-                        <a id="" class="btnIrInicio" style="color:#000000; font-weight: bold" href="${sc.Views.Inicio.UrlHash}">${sc.Views.Inicio.Name}</a>
-                        <a class="" href="${sc.Views.Nosotros.UrlHash}">${sc.Views.Nosotros.Name}</a>
-                        <a class="" href="${sc.Views.Servicios.UrlHash}">${sc.Views.Servicios.Name}</a>
-                        <a class="" href="${sc.Views.Contacto.UrlHash}">${sc.Views.Contacto.Name}</a>
+                        <a href="${sc.Views.Inicio.UrlHash}">${sc.Views.Inicio.Name}</a>
+                        <a href="${sc.Views.Nosotros.UrlHash}">${sc.Views.Nosotros.Name}</a>
+                        <a href="${sc.Views.Servicios.UrlHash}">${sc.Views.Servicios.Name}</a>
+                        <a href="${sc.Views.Contacto.UrlHash}">${sc.Views.Contacto.Name}</a>
                         <a href="${sc.Views.Contacto.UrlHash}" class="btnPresupuesto" id="btnPresupuesto_menu">PRESUPUESTO</a>
                         <div id="div-socialMenu">
                             <a href="https://www.instagram.com/gma_desarrolloweb" target="_blank" class="icon-instagram"></a>
@@ -65,5 +67,4 @@ export default class Header{
             this.divMenu.classList.replace("animate__fadeOut", "animate__fadeIn");
         }, 200);
     }
-    
 }

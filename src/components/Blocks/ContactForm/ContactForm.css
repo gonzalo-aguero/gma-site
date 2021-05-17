@@ -19,7 +19,6 @@ input[type="text"],input[type="email"],select, textarea{
     border: 1px var(--bordeGrisSuave) solid;
     font-size: 15px;
     padding: 10px;
-    font-family:"Montserrat";
     border-radius: 4px;
     resize: vertical;
 }
