@@ -1,5 +1,7 @@
+var sc;
 export default class ContactUs{
-    constructor(){
+    constructor(SiteConfig){
+        sc = SiteConfig;
         this.html = `
             <section id="contactanos" class="section1">
                 <div>
@@ -9,7 +11,7 @@ export default class ContactUs{
                     <h2>Contactate con nosotros y enterate como funciona nuestro servicio.</h2>
                 </div>
                 <div>
-                    <a href="contacto" id="btnContactar">CONTACTAR</a>
+                    <a href="${sc.Views.Contacto.UrlHash}" id="btnContactar">CONTACTAR</a>
                 </div>
             </section>
             `;

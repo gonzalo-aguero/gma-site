@@ -2,7 +2,7 @@
 import Header from "../Header/Header.js";
 import ContactForm from "../Blocks/ContactForm/ContactForm.js";
 import OurPoints from "../Blocks/OurPoints/OurPoints.js"
-import Services from "../Blocks/Services/Services.js";
+import ServicesBlock from "../Blocks/ServicesBlock/ServicesBlock.js";
 import ContactUs from "../Blocks/ContactUs/ContactUs.js";
 import OurClients from "../Blocks/OurClients/OurClients.js";
 import Footer from "../Footer/Footer.js";
@@ -11,7 +11,7 @@ var sc;//SITE CONFIGURATION
 var header;
 var contactForm;
 var ourPoints;
-var services;
+var servicesBlock;
 var contactUs;
 var ourClients;
 var footer;
@@ -21,8 +21,8 @@ export default class Contact{
         header = new Header(sc);
         contactForm = new ContactForm(sc);
         ourPoints = new OurPoints();
-        services = new Services();
-        contactUs = new ContactUs();
+        servicesBlock = new ServicesBlock(sc);
+        contactUs = new ContactUs(sc);
         ourClients = new OurClients();
         footer = new Footer(sc);
 
@@ -30,7 +30,7 @@ export default class Contact{
             ${header.html}
             ${contactForm.html}
             ${ourPoints.html}
-            ${services.html}
+            ${servicesBlock.html}
             ${contactUs.html}
             ${ourClients.html}
             ${footer.html}

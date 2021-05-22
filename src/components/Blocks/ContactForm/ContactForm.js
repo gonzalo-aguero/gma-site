@@ -30,9 +30,28 @@ export default class ContactForm{
             `;
     }
     run(){
-        document.querySelector('#contactForm input[type="submit"]').addEventListener("click",this.submit);
+        const submitBtn = document.querySelector('#contactForm input[type="submit"]');
+        var submitBtnStatus = true;//true = enabled; false = disabled;
+
+        //### SUBMIT CONTACT FORM ###//
+        submitBtn.addEventListener("click",async (evt)=>{
+            evt.preventDefault();
+            if(submitBtnStatus){
+                submitBtnStatus = false;
+                submitBtn.style = `
+                    opacity: 25%;
+                    cursor: default;
+                `;
+                alert(await this.async_submit());
+                submitBtn.style = `
+                    opacity: 100%;
+                    cursor: pointer;
+                `;
+                submitBtnStatus = true;
+            }
+        });
     }
-    async submit(){
+    async async_submit(){
         const fullname = document.getElementById("fullname").value;
         const email = document.getElementById("email").value;
         const phone = document.getElementById("phone").value;
@@ -42,43 +61,21 @@ export default class ContactForm{
         data.append("email",email);
         data.append("phone",phone);
         data.append("msg",msg);
-        fetch()
-        .then()
-        .then()
-
-    }
-    async ajax_getProducts(printProducts = true, f) {
-        var data = new FormData();
-        data.append("action","products");
-        const r = await fetch('./src/php/get.php',{ 
+        const r = await fetch('./src/php/contactForm.php',{ 
             method: 'POST',
             body: data
         });
-        const formattedResponse = await r.json();
+        const formattedResponse = await r.text();
         if(r.status !== 200)
-            throw Error("Error en Products.ajax_getProducts()");
-        let productsList = formattedResponse;
-        //Se guardan los productos en la propiedad productsList de la clase (Array).
-        productsList.forEach((product, i) => {
-            this.productsList[i] = {
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                description: product.description,
-                category: product.category.split(","),// categories array
-                images: product.images.split(','),// images array
-                stock: product.stock,
-                sold: product.sold // sold products (int)
-            }
-        });
-        console.log("Products:",this.productsList);
-        if(printProducts){
-            let productList = this.findBestSellingProducts(this.productsList);
-            this.printProductList(productList,this.productListHTMLTemplate);
-        }
-        if(f)
-            f(productsList);//Callback function.
-        return true;
+            throw Error("Error en ContactForm.async_submit()");
+
+        if(formattedResponse === "void")
+            return "Todos los campos son requeridos.";
+        else if(formattedResponse == 1)
+            return `Correo enviado correctamente!`;
+        else if(formattedResponse == 0)
+            return `Error al enviar correo.`;
+        else
+            return `Ha ocurrido un error desconocido.\n${formattedResponse}`;
     }
-    
 }

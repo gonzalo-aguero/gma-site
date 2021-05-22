@@ -1,51 +1,35 @@
 export default class LoadingView{
     constructor(){
-        //IMPORTED IN INDEX PAGE
+        //Imported in index.php
         this.styles = '<link rel="stylesheet" href="./src/components/LoadingView/LoadingView.css">';
-        this.img = null;
+        this.loader = null;
     }
     printHTML(){
         document.getElementById('LoadingView').innerHTML = `
-        <div id="div-cargando" class="animate__animated animate__faster">
-            <div id="div-izq" class="animate__animated animate__slow"></div>
-            <div id="div-imgCargando">
-                <img src="./src/media/img/favicon/logo4.png" class="animate__animated animate__slow animate__fadeIn" alt="Cargando...">
+        <div id="loaderContainer">
+            <div class="cube-wrapper">
+                <div class="cube-folding">
+                <span class="leaf1"></span>
+                <span class="leaf2"></span>
+                <span class="leaf3"></span>
+                <span class="leaf4"></span>
+                </div>
+                <span class="loading" data-name="Loading">Loading</span>
             </div>
-            <div id="div-der" class="animate__animated animate__slow"></div>
         </div>
         `;
     }
     run(){
-        this.img = document.querySelector('#div-imgCargando > img');
-        this.animCargando();
-        setTimeout(() => {
-            this.endAnimCargando();
-        }, 2000);
+        this.loader = document.getElementById('loaderContainer');
     }
-    animCargando() {
-        this.img.style.display = 'block';
-        var animCargando = setInterval(() => {
-            this.img.classList.remove("animate__fadeIn");
-            this.img.classList.add("animate__fadeOut");
-            setTimeout(() => {
-                this.img.classList.remove("animate__fadeOut");
-                this.img.classList.add("animate__fadeIn");
-            }, 1000);
-        }, 1000);
+    showLoader(){
+        document.body.style.overflowY = "hidden";
+        this.loader.style.display = "block";
     }
-    endAnimCargando() {
-        clearInterval(this.animCargando);
-        this.img.classList.remove("animate__fadeIn");
-        this.img.classList.remove("animate__slow");
-        this.img.classList.add("animate__fast");
-        this.img.classList.add("animate__fadeOut");
+    hideLoader(timeout = 0){
         setTimeout(() => {
-            document.querySelector('#div-izq').classList.add("animate__fadeOutLeftBig");
-            document.querySelector('#div-der').classList.add("animate__fadeOutRightBig");
-            document.body.style.overflowY = 'auto';
-            setTimeout(() => {
-                document.querySelector('#div-cargando').style.display = 'none';
-            }, 1000);
-        }, 500);
+            this.loader.style.display = "none";
+            document.body.style.overflowY = "auto";
+        }, timeout);
     }
 }

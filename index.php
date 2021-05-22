@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./src/components//Blocks/CoverPage/CoverPage.css">
     <link rel="stylesheet" href="./src/components/Blocks/Motivation/Motivation.css">
     <link rel="stylesheet" href="./src/components/Blocks/OurPoints/OurPoints.css">
-    <link rel="stylesheet" href="./src/components/Blocks/Services/Services.css">
+    <link rel="stylesheet" href="./src/components/Blocks/ServicesBlock/ServicesBlock.css">
     <link rel="stylesheet" href="./src/components/Blocks/ContactUs/ContactUs.css">
     <link rel="stylesheet" href="./src/components/Blocks/OurClients/OurClients.css">
     <link rel="stylesheet" href="./src/components/Footer/Footer.css">
