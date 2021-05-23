@@ -55,7 +55,7 @@
 @media screen and (max-width:450px){
     #contactanos{
         padding-top: 5%;
-        padding-bottom: 5%;
+        /* padding-bottom: 5%; */
     }
     #contactanos h1{
         font-size: 35px;

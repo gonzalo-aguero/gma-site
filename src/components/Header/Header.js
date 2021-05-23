@@ -6,20 +6,20 @@ export default class Header{
             <header>
             <nav>
                 <div id="logoANDtitulo" class="div-nav">
-                    <img src="img/logo/logoGrandeRedim.png" alt="" srcset="">
+                    <img src="./src/media/img/logo/logoGrandeRedim.png" alt="Logo GMA">
                     <div>
                         <h1>GMA</h1>
                         <h2>Desarrollo web</h2>
                     </div>
                 </div>
                 <div class="div2-nav">
-                    <div id="btnAbrirMenu"><img src="iconosMaterial_io/menu-24px.svg" alt="" srcset=""></div>
+                    <div id="btnAbrirMenu"><img src="./src/media/img/Icons/menu-24px.svg" alt="Abrir menú"></div>
                     <a href="${sc.Views.Contacto.UrlHash}"><div id="btnPresupuesto" class="btnPresupuesto">PRESUPUESTO</div></a>
                 </div>
                 <div id="div-menu" class="animate__animated animate__fadeIn">
                     <div></div>
                     <ul class="animate__animated animate__fadeInRightBig">
-                        <img id="btnCerrarMenu" src="iconosMaterial_io/clear-24px.svg" alt="Cerrar">
+                        <img id="btnCerrarMenu" src="./src/media/img/Icons/clear-24px.svg" alt="Cerrar menú">
                         <a href="${sc.Views.Inicio.UrlHash}">${sc.Views.Inicio.Name}</a>
                         <a href="${sc.Views.Nosotros.UrlHash}">${sc.Views.Nosotros.Name}</a>
                         <a href="${sc.Views.Servicios.UrlHash}">${sc.Views.Servicios.Name}</a>
@@ -35,10 +35,12 @@ export default class Header{
             </nav>
         </header>
         `;
+        this.logoAndTitle;
         this.divMenu;
         this.ul;
     }
     run(){
+        this.logoAndTitle = document.getElementById('logoANDtitulo');
         this.divMenu = document.getElementById("div-menu");
         this.ul = document.querySelector('#div-menu > ul');
         var btnAbrirMenu = document.getElementById("btnAbrirMenu");
@@ -53,6 +55,9 @@ export default class Header{
         });
         closeMenuBtn.addEventListener("click", ()=>{
             this.closeMenu();
+        });
+        this.logoAndTitle.addEventListener("click",()=>{
+            window.location.hash = "#";
         });
     }
     openMenu(){

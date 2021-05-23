@@ -39,5 +39,6 @@ export default class Contact{
     run(){
         header.run();
         contactForm.run()
+        ourClients.run();
     }
 }

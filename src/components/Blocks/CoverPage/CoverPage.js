@@ -1,5 +1,5 @@
-export default class CoverPage{
-    constructor(){
+export default class CoverPage {
+    constructor() {
         this.html = `
             <section class="portada">
                 <div class="slider">
@@ -10,7 +10,7 @@ export default class CoverPage{
             </section>
             `;
     }
-    run(){
+    run() {
         $('.slider').bxSlider({
             auto: true,
             speed: 1000,

@@ -43,5 +43,7 @@ export default class Home{
     run(){
         header.run();
         coverPage.run();
+        motivation.run();
+        ourClients.run();
     }
 }

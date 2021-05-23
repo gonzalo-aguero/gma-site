@@ -6,7 +6,7 @@ export default class LoadingView{
     }
     printHTML(){
         document.getElementById('LoadingView').innerHTML = `
-        <div id="loaderContainer">
+        <div class="animate__animated animate__fadeOut" id="loaderContainer">
             <div class="cube-wrapper">
                 <div class="cube-folding">
                 <span class="leaf1"></span>
@@ -24,12 +24,16 @@ export default class LoadingView{
     }
     showLoader(){
         document.body.style.overflowY = "hidden";
+        this.loader.classList.remove("animate__fadeOut");
         this.loader.style.display = "block";
     }
     hideLoader(timeout = 0){
         setTimeout(() => {
-            this.loader.style.display = "none";
+            this.loader.classList.add("animate__fadeOut");
+            setTimeout(()=>{
+                this.loader.style.display = "none";
             document.body.style.overflowY = "auto";
+            },800);
         }, timeout);
     }
 }

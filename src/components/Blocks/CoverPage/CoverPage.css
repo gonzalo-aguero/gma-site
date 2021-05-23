@@ -1,24 +1,21 @@
 .portada{
     background: var(--plainBG_Dye);
     height: 600px;
-    border-bottom: 2px #292828 solid;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 .div-portada{
     position: relative;
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .div-portada h1{
-    position: relative;
-    color: white;
     font-size: 50px;
     z-index: 1;
-    top: 45%;
     text-align: center;
     width:70%;
-    margin:auto;
+    color: #f3f3f3;
+    text-shadow: -1px 2px 12px rgba(0,0,0,0.9);
 }
 .div-portada:before{
    content: "";
@@ -73,7 +70,7 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     .div-portada h1{
         font-size: 30px;
         top: 45%;
-        width:90%;
+        width:70%;
     }
     #div-portada2 h1{
         top: 40%;

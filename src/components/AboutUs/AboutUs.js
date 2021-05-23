@@ -38,5 +38,6 @@ export default class AboutUs{
     }
     run(){
         header.run();
+        ourClients.run();
     }
 }

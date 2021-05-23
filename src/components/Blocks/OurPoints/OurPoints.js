@@ -6,25 +6,25 @@ export default class OurPoints{
                 <div class="itemArgumento">
                     <h2>Buen diseño</h2>
                     <p>
-                        Un buen diseño dará la mejor imágen de su empresa.
+                        Un buen diseño siempre inspirará confianza y profesionalidad.
                     </p>
                 </div>
                 <div class="itemArgumento">
-                    <h2>Comunicación</h2>
+                    <h2>Soporte</h2>
                     <p>
-                        Estamos constantemente atentos a tus consultas, antes, durante y después del desarrollo.
+                        Estamos dispuestos a resolver cualquier duda que tengas antes, durante y después del desarrollo.
                     </p>
                 </div>
                 <div class="itemArgumento">
                     <h2>Responsive design</h2>
                     <p>
-                        Tu sitio se verá perfecto en todos los dispositivos.
+                        Hacemos que tu sitio se vea perfecto tanto en computadoras como tablets y celulares.
                     </p>
                 </div>
                 <div class="itemArgumento">
-                    <h2>Eficaces</h2>
+                    <h2>Efectivos</h2>
                     <p>
-                        Logramos cumplir todos nuestros objetivos.
+                        Siempre logramos cumplir con todos nuestros objetivos.
                     </p>
                 </div>
             </section>

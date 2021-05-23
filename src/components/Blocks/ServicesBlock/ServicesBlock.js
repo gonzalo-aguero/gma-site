@@ -8,7 +8,7 @@ export default class Services{
                 <h1 class="titulo">Lo que ofrecemos</h1>
                 <div id="servicesContainer">
                     <div id="servicesPage" class="service">
-                        <img src="./img/website.png" alt="Página de servicios">
+                        <img src="./src/media/img/website.png" alt="Página de servicios">
                         <div>
                             <h2>Página de servicios</h2>
                             <p>
@@ -22,7 +22,7 @@ export default class Services{
                         </div>
                     </div>
                     <div id="ecommerce" class="service">
-                        <img src="img/ecommerce.png" alt="Tienda online">
+                        <img src="./src/media/img/ecommerce.png" alt="Tienda online">
                         <div>
                             <h2>Tienda online</h2>
                             <p>
