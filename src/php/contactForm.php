@@ -36,8 +36,8 @@ if(!empty($_POST['fullname'])
     $header .= "X-Mailer: PHP/". phpversion();
     try {
         $mail = mail($to,$title,$message,$header);
-    } catch (\Throwable $th) {
-        echo $th;
+    } catch (Exception $e) {
+        echo $e->getMessage();
     }
     if($mail){
         $message = "
