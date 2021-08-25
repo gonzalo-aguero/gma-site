@@ -34,7 +34,11 @@ if(!empty($_POST['fullname'])
     $header = "From: ".$from. "\r\n";
     $header .= "Reply-To: ".$from. "\r\n";
     $header .= "X-Mailer: PHP/". phpversion();
-    $mail = mail($to,$title,$message,$header);
+    try {
+        $mail = mail($to,$title,$message,$header);
+    } catch (\Throwable $th) {
+        echo $th;
+    }
     if($mail){
         $message = "
             ¡Hola!\n
