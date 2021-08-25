@@ -1,0 +1,67 @@
+#clientes{
+    padding: 5%;
+    background: var(--plainBG_Dye);
+}
+#slider2Container{
+    background: var(--plainBG_Dye);
+    height: 200px;
+}
+#slider2Container .bx-pager.bx-default-pager {
+    display: none;
+}
+div.slider2 > a.customer{
+    position: relative;
+    height: 200px;
+}
+div.slider2 > a._0{
+    background: url('../../../media/img/ourClients/bgatransporte.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;   
+}
+div.slider2 > a._1{
+    background: url('../../../media/img/ourClients/bskelevadores(LN).png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;   
+}
+div.slider2 > a._2{
+    background: url('../../../media/img/ourClients/cabanaspostalesdesauce.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;   
+}
+div.slider2 > a._3{
+    background: url('../../../media/img/ourClients/anubisinsumos.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;   
+}
+@media screen and (max-width: 660px){
+    #clientes{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    #slider2Container{
+        height: 160px;
+    }
+    div.slider2 > a.customer{
+        height: 160px;
+    }
+}
+@media screen and (max-width: 550px){
+    #slider2Container{
+        height: 120px;
+    }
+    div.slider2 > a.customer{
+        height: 120px;
+    }
+}
+@media screen and (max-width: 380px){
+    #slider2Container{
+        height: 80px;
+    }
+    div.slider2 > a.customer{
+        height: 80px;
+    }
+}

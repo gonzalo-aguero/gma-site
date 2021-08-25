@@ -1,0 +1,135 @@
+.servicios{
+    background: var(--plainBG_Dye);
+    padding: 5%;
+}
+#servicesContainer{
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    justify-content: space-evenly;
+}
+#servicesContainer > div.service{
+    font-size: 10px;
+    width: 100em;
+    display:flex;
+    flex-flow: column;
+    align-items:center;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 35px;
+    -webkit-box-shadow: 0px 10px 50px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 50px -20px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 50px -20px rgba(0,0,0,0.75);
+}
+div.service > img{
+	width: 20em;
+	height: 20em;
+}
+div.service > div{
+	-webkit-box-shadow: 0px -2px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 10px -5px rgba(0,0,0,0.75);
+	background: #f5f5f5;
+	padding: 2.5em;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 30em;
+}
+div.service > div > h2{
+    font-size: 4em;
+    font-weight: lighter;
+    text-align: center;
+    color: #333333;
+}
+div.service > div > p{
+	font-size: 1.65em;
+    color: #333333;
+    margin-bottom: 0.75em;
+}
+div.service > div > a{
+    font-size: 2.5em;
+    border: 0.01em #333333 solid;
+    border-radius: 0.25em;
+    color: #333333;
+    background: white;
+    padding: 0.5em;
+    transition:0.25s;
+}
+div.service > div > a:hover{
+	transition:0.25s;
+	opacity: 0.5;
+}
+@media screen and (max-width: 1080px){
+	#servicesContainer > div.service{
+		font-size: 8px;
+	}
+	div.service > div{
+		height: 35em;
+	}
+	div.service > div > p{
+		font-size: 1.85em;
+	}
+}
+@media screen and (max-width: 850px){
+	#servicesContainer > div.service{
+		font-size: 7px;
+	}
+	div.service > div{
+		height: 40em;
+	}
+	div.service > div > p{
+		font-size: 2.25em;
+	}
+}
+@media screen and (max-width: 720px){
+	#servicesContainer > div.service{
+		width: 80em;
+	}
+	div.service > div{
+		height: 50em;
+		justify-content: space-evenly;
+	}
+	div.service > div > p{
+		font-size: 2.25em;
+	}
+}
+@media screen and (max-width: 600px){
+	#servicesContainer > div.service{
+		width: 55em;
+	}
+	div.service > div{
+		height: 65em;
+	}
+}
+@media screen and (max-width: 420px){
+	#servicesContainer > div.service{
+		width: 90%;
+	}
+	div.service > div{
+		min-height: 65em;
+		height: auto;
+		justify-content: space-between;
+	}
+	div.service > div > p{
+		font-size: 2.15em;
+	}
+}
+@media screen and (max-width: 360px){
+	#servicesContainer > div.service{
+		width: 100%;
+	}
+	div.service > div{
+		min-height: auto;
+
+	}
+	div.service > div > p{
+		font-size: 2em;
+	}
+}
+@media screen and (max-width: 280px){
+	div.service > div > p{
+		font-size: 1.95em;
+	}
+}
