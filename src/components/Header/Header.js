@@ -10,6 +10,7 @@ export default class Header{
                     <div>
                         <h1>GMA</h1>
                         <h2>Desarrollo web</h2>
+                        <h3>hello friend
                     </div>
                 </div>
                 <div class="div2-nav">

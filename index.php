@@ -73,6 +73,23 @@ src="https://www.facebook.com/tr?id=328163691790309&ev=PageView&noscript=1"
 -->
 </head>
 <body>
+    <!-- 
+        ====== Important note / Nota importante ======
+
+        ENGLISH:
+        The content of this website is printed when JavaScript is started. 
+        Search engines such as Google, when rendering the page, do not execute JS, 
+        so the page would appear blank, something very negative for SEO. 
+        So what we do here is copy the html inserted by JavaScript and place it 
+        in this file so that Google and other search engines can see the content.
+
+        ESPAÑOL:
+        El contenido de este sitio web se imprime cuando se inicia a ejecutar JavaScript. 
+        Los motores de busqueda como Google, al renderizar la página no ejecutan JS, 
+        por lo que la página aparecería en blanco, algo muy negativo para el SEO. 
+        Por lo tanto lo que hacemos aquí es copiar el html insertado por JavaScript y colocarlo 
+        en este archivo para que Google y otros motores de búsqueda puedan ver el contenido.
+    -->
     <div id="app">
       <div style="
         position: fixed;
@@ -90,7 +107,6 @@ src="https://www.facebook.com/tr?id=328163691790309&ev=PageView&noscript=1"
                 <div>
                     <h1>GMA</h1>
                     <h2>Desarrollo web</h2>
-                    <h3>Desde heroku pero conectado a github</h3>
                 </div>
             </div>
             <div class="div2-nav">
