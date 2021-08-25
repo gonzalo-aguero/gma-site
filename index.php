@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>GMA desarrollo web</title>
+    <title>GMA desarrollo web in Heroku</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="como tener una pagina,como hacer una pagina,empresas,negocio,empresa,servicio,web,pagina,sitio web,desarrollo web, gmadesarrolloweb.ml, gmadesarrolloweb,GMA,gma,ecommerce,commerce,e-commerce,tienda,tienda online,comercio electronico,gma desarrolloweb,gma desarrollo web,parana,argentina,entre rios,Desarrollo web argentina,Desarrollo web parana,paraná"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
