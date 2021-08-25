@@ -90,6 +90,7 @@ src="https://www.facebook.com/tr?id=328163691790309&ev=PageView&noscript=1"
                 <div>
                     <h1>GMA</h1>
                     <h2>Desarrollo web</h2>
+                    <h3>Desde heroku pero conectado a github</h3>
                 </div>
             </div>
             <div class="div2-nav">
