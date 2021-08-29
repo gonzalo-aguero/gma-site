@@ -1,4 +1,4 @@
-# gmadesarrolloweb.ml
+# GMA website
 Repositorio del sitio gmadesarrolloweb.ml.
 
 ## Estructura del código.
