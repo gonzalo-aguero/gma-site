@@ -9,7 +9,7 @@ export default class Header{
                     <img src="./src/media/img/logo/logoGrandeRedim.png" alt="Logo GMA">
                     <div>
                         <h1>GMA</h1>
-                        <h2>Desarrollo web</h2>
+                        <h2>Desarrollo webn</h2>
                     </div>
                 </div>
                 <div class="div2-nav">
